@@ -1,0 +1,38 @@
+<div class="chest"
+  (click)="toggle()"
+  >
+  <div class="chest__top">
+    <div class="chest__top__front" [@openClose]="isOpen ? 'opened_top' : 'closed_top'" (@openClose.done)="animationDone($event)">
+      <div class="chest__top__front--wood" [@openClose]="isOpen ? 'opened_s' : 'closed_wood'"></div>
+      <div class="chest__top__front--panel-bottom"></div>
+      <div class="chest__top__front--panel-left" [@openClose]="isOpen ? 'opened_s' : 'closed_panel'"></div>
+      <div class="chest__top__front--panel-right" [@openClose]="isOpen ? 'opened_s' : 'closed_panel'"></div>
+      <div class="chest__top__front--lock" [@openClose]="isOpen ? 'opened_s' : 'closed_lock'">
+        <div class="chest__top__front--lock--keyhole"></div>
+      </div>
+    </div>
+    <div class="chest__top__back" [@openClose]="isOpen ? 'opened_top' : 'closed_top'">
+      <div class="chest__top__back--wood" [@openClose]="isOpen ? 'opened_s' : 'closed_wood'"></div>
+      <div class="chest__top__back--panel-left" [@openClose]="isOpen ? 'opened_s' : 'closed_panel'"></div>
+      <div class="chest__top__back--panel-right" [@openClose]="isOpen ? 'opened_s' : 'closed_panel'"></div>
+      <div class="chest__top__back--panel-bottom">
+        <div class="chest__top__back--panel-bottom-inner"></div>
+      </div>
+      <div class="chest__top__back--lock">
+        <div class="chest__top__back--lock--keyhole"></div>
+      </div>
+    </div>
+  </div>
+  <div class="chest__lingots" [@openClose]="isOpen ? 'opened_lingots' : 'closed_lingots'">
+    <div class="chest__lingots--lingot-1"></div>
+    <div class="chest__lingots--lingot-2"></div>
+    <div class="chest__lingots--lingot-3"></div>
+  </div>
+  <div class="chest__bottom">
+    <div class="chest__bottom--wood"></div>
+    <div class="chest__bottom--panel-bottom"></div>
+    <div class="chest__bottom--panel-left"></div>
+    <div class="chest__bottom--panel-right"></div>
+  </div>
+  <div class="chest__shadow"></div>
+</div>
